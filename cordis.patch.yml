@@ -1,0 +1,11 @@
+# dsh-social bundle patch
+#
+# One insert mounts the whole plugin. Configuration lives in the profile's
+# cordis.patch.yml when it needs to differ from the defaults; README.md lists
+# every key and what it does.
+#
+# The defaults are read-only and budgeted: nobody is logged in, nothing is
+# posted, and a run stops after a small number of platform requests.
+- insert:
+    - id: social
+      name: dsh-social

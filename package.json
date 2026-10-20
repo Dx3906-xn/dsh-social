@@ -1,0 +1,50 @@
+{
+  "name": "dsh-social",
+  "version": "0.1.0",
+  "description": "A read-only window onto social platforms for DSH companion agents: browse what is happening, remember what caught her eye, never post.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/**/*.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "social",
+    "bilibili",
+    "companion",
+    "read-only"
+  ],
+  "scripts": {
+    "test": "node test/run-suites.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dx3906-xn/dsh-social.git"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.4",
+    "@deepseek-ai/schemastery": "~3.18.4"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": { "optional": false },
+    "@deepseek-ai/schemastery": { "optional": false }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
